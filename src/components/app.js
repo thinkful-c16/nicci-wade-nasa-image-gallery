@@ -57,7 +57,11 @@ export default class App extends React.Component {
     return (
       <div className="main">
         <LeftArrow onClick={e => this.clickPrev(e)} />
-        <Image photo={this.props.photos[this.state.index].img_src} />
+        <Image
+          photo={this.props.photos[this.state.index].img_src } 
+          counter={this.state.index + 1}
+          totalImages={this.props.photos.length}
+        />
         <RightArrow onClick={e => this.clickNext(e)}/>
       </div>
     );
