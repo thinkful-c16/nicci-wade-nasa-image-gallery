@@ -2,6 +2,7 @@ import React from 'react';
 import Image from './image';
 import LeftArrow from './left-arrow';
 import RightArrow from './right-arrow';
+import './app.css';
 
 export default class App extends React.Component {
   
