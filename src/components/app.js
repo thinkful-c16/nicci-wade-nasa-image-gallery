@@ -2,6 +2,7 @@ import React from 'react';
 import Image from './image';
 import LeftArrow from './left-arrow';
 import RightArrow from './right-arrow';
+import Modal from './modal';
 import './app.css';
 
 export default class App extends React.Component {
@@ -9,7 +10,8 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      index: 0
+      index: 0,
+      modalDisplay: "none"
     };
   }
 
@@ -52,6 +54,18 @@ export default class App extends React.Component {
     }
   }
 
+  showModal(){
+    if(this.state.modalDisplay === "none"){
+      this.setState({
+        modalDisplay: "block"
+      });
+    }else{
+      this.setState({
+        modalDisplay: "none"
+      });
+    }
+  }
+
   render() {
     console.log(this.props.photos)
     return (
@@ -61,8 +75,16 @@ export default class App extends React.Component {
           photo={this.props.photos[this.state.index].img_src } 
           counter={this.state.index + 1}
           totalImages={this.props.photos.length}
+          onClick={e => this.showModal(e)}
         />
         <RightArrow onClick={e => this.clickNext(e)}/>
+        <Modal
+          display={this.state.modalDisplay}
+          photo={this.props.photos[this.state.index].img_src } 
+          counter={this.state.index + 1}
+          totalImages={this.props.photos.length}
+          onClick={e => this.showModal(e)}
+        />
       </div>
     );
   }
