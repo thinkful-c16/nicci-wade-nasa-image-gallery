@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function RightArrow(props) {
   return (
-    <span>
+    <span onClick={props.onClick} >
       &#187;
     </span>
   );

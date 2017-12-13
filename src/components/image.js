@@ -3,6 +3,9 @@ import './image.css'
 
 export default function Image(props) {
   return (
-    <img src={props.photos[0].img_src} alt="Rover"/>
-  )
+    <div className="imgContaianer">
+      <img src={props.photo} alt="Rover"/>
+      <div className="imgCounter">2 of 20</div>
+    </div>
+  );
 }
