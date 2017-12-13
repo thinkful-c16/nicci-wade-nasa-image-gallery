@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from './image';
 
 export default class App extends React.Component {
   
@@ -10,8 +11,9 @@ export default class App extends React.Component {
   }
 
   render() {
+    console.log(this.props.photos)
     return (
-      console.log('hello world!')
+      <Image photos={this.props.photos}/>
     );
   }
 
