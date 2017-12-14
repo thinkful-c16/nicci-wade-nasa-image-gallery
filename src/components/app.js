@@ -70,7 +70,7 @@ export default class App extends React.Component {
     console.log(this.props.photos)
     return (
       <div className="main">
-        <div>
+        <div className="appTitle">
           <h1>NASA Image Gallery</h1>
           <h4>Click arrows, to scroll. Click image, to enlarge.</h4>
         </div>
