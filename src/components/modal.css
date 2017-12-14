@@ -20,8 +20,8 @@
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 800px;
-  max-height: 800px;
+  width: 700px;
+  height: 700px;
 }
 
 /* styles for caption(counter) */

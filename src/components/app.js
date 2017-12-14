@@ -70,6 +70,10 @@ export default class App extends React.Component {
     console.log(this.props.photos)
     return (
       <div className="main">
+        <div>
+          <h1>NASA Image Gallery</h1>
+          <h4>Click arrows, to scroll. Click image, to enlarge.</h4>
+        </div>
         <LeftArrow onClick={e => this.clickPrev(e)} />
         <Image
           photo={this.props.photos[this.state.index].img_src } 
